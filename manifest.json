@@ -8,4 +8,5 @@
     "theme_color": "#2f3d58",
     "orientation": "any",
     "display": "standalone",
+    "edge_side_panel": {}
 }
