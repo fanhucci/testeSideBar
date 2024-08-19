@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded",function(){
+    dataAgora();
+    setInterval(dataAgora, 1000);
+
+    function dataAgora(){
+        const  agora =  new Date();
+        const diaSemana = agora.toLocaleString('pt-BR',{weekday:'long'});
+        const diaMes = agora.toLocaleString('pt-BR',{month:'numeric',day:'numeric'});
+        const horaMinuto = agora.toLocaleString('pt-BR',{hour:'numeric',minute:'numeric'});
+        const dataFormatada = `${diaSemana}</br>${diaMes}</br>${horaMinuto}`;
+
+        document.getElementById('datetime').innerHTML = dataFormatada;
+    }
+
     let a = document.getElementById('n1a');
     let b = document.getElementById('n1b');
     let c = document.getElementById('n2a');

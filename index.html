@@ -11,20 +11,19 @@
 <body>
     <div class="container">
         <div class="header">
-            <h4>DOMINGO</h4>
-            <h4>18/08</h4>
-            <h4>10:01</h4>
+            <div id="datetime">
+            </div>
         </div>
         <div class="ferramenta" id="regra3">
-            <input id="n1a" type="number" placeholder="1a">
-            <input id="n1b" type="number" placeholder="1b">
-            <input id="n2a" type="number" placeholder="2a">
+            <input id="n1a" type="number" placeholder="A">
+            <input id="n1b" type="number" placeholder="B">
+            <input id="n2a" type="number" placeholder="C">
             <input id="n2b" type="number" placeholder="X" readonly>
         </div>
     </div>
     <script>
         if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw.js', { scope: '/' });
+            navigator.serviceWorker.register('/sw.js', { scope: '/' });
         }
     </script>
 </body>
