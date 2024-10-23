@@ -7,18 +7,46 @@
     <link rel="stylesheet" href="estilo.css">
     <script src="funcoes.js"></script>
     <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-    <div class="container">
+    <div class="container"> 
+
         <div class="header">
-            <div id="datetime">
-            </div>
+            <div id="datetime"></div>
         </div>
-        <div class="ferramenta" id="regra3">
-            <input id="n1a" type="number" placeholder="A">
-            <input id="n1b" type="number" placeholder="B">
-            <input id="n2a" type="number" placeholder="C">
-            <input id="n2b" type="number" placeholder="X" readonly>
+
+        <div class="ferramenta" >
+
+
+            <div class="botao" data-estado="aberto">
+                <p>Regra de 3 </p>
+                <i class="fa-solid fa-chevron-up fa-sm"></i> 
+            </div>
+
+            <div class="aplicacao" id="regra3" style="display: flex;">
+                <div>
+                    <input id="n1a" type="number" placeholder="A">
+                    <input id="n1b" type="number" placeholder="B">
+                </div>
+                <div>
+                    <input id="n2a" type="number" placeholder="C">
+                    <input id="n2b" type="number" placeholder="X" readonly style="background-color: #4a4a4a;color: white;">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="ferramenta">
+            <div class="botao">
+                teste
+                <i class="fa-solid fa-chevron-up fa-flip-vertical fa-sm"></i> 
+            </div>
+            <div class="aplicacao">
+
+            </div>
         </div>
     </div>
     <script>

@@ -25,4 +25,27 @@ document.addEventListener("DOMContentLoaded",function(){
     a.addEventListener('input',regra3,false);
     b.addEventListener('input',regra3,false);
     c.addEventListener('input',regra3,false);
+
+    let botoesFerramentas = this.documentElement.querySelectorAll('.botao');
+    botoesFerramentas.forEach(botao => {
+        botao.addEventListener('click',function(){
+            abreFecha(this);
+        },false)
+    });
+
+    function abreFecha(botao){
+        const estado = botao.dataset.estado;
+        const app = botao.parentElement.querySelector('.aplicacao');
+        if(estado==='fechado'){
+            botao.dataset.estado = 'aberto';
+            botao.querySelector('i').className='fa-solid fa-chevron-up fa-sm';
+            app.style.display = 'flex';
+
+        }
+        else{
+            botao.dataset.estado = 'fechado';
+            botao.querySelector('i').className='fa-solid fa-chevron-up fa-flip-vertical fa-sm';
+            app.style.display = 'none';
+        }
+    }
 },false);
